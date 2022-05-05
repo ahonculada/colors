@@ -13,6 +13,7 @@ def find_majority(Ranks: list) -> (list, list):
     for row in range(len(Ranks)):
         for col in range(len(Ranks[0])):
             Totals[col] += Ranks[row][col]
+    print(Totals)
     # find majority
     ans = []
     for i, total in enumerate(Totals):

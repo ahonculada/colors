@@ -1,5 +1,6 @@
 from fastapi import FastAPI, Form, Request
 from fastapi.templating import Jinja2Templates
+from starlette.responses import FileResponse
 
 from quiz import find_majority, check_for_duplicates
 
@@ -36,13 +37,19 @@ async def root(
         r3c1: int = Form(...),
         r3c2: int = Form(...),
         r3c3: int = Form(...),
+        r4c0: int = Form(...),
+        r4c1: int = Form(...),
+        r4c2: int = Form(...),
+        r4c3: int = Form(...),
 ):
     Rankings = [
             [r0c0, r0c1, r0c2, r0c3],
             [r1c0, r1c1, r1c2, r1c3],
             [r2c0, r2c1, r2c2, r2c3],
-            [r3c0, r3c1, r3c2, r3c3]
+            [r3c0, r3c1, r3c2, r3c3],
+            [r4c0, r4c1, r4c2, r4c3]
     ]
+    print(Rankings)
 
     if check_for_duplicates(Rankings):
         return templates.TemplateResponse(
@@ -64,3 +71,6 @@ async def root(
             }
     )
 
+@app.get('/favicon.ico')
+async def favicon():
+    return FileResponse('favicon.ico')
