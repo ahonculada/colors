@@ -5,8 +5,95 @@
 	<title>Welcome to the Color Quiz.</title>
 </head>
 <body>
+<h1>Rank boxes in each row from most similar (4) to least similar (1) to you.</h1>
+<h2>Each row must be numbered 1 to 4 with no duplicates.</h2>
 <form method="post">
-	<input type="text" name="color"/>
+    <table>
+        <tr>
+            <td>     </td>
+            <td>Active<br>
+                Opportunistic<br>
+                Spontaneous<br>
+                <input type="number" name="r0c0" min="1" max="4" value="1"/></td>
+            <td>Parental<br>
+                Traditional<br>
+                Responsible<br>
+                <input type="number" name="r0c1" min="1" max="4" value="1"/></td>
+	        <td>Authentic<br>
+                Harmonious<br>
+                Compassionate<br>
+                <input type="number" name="r0c2" min="1" max="4" value="1"/></td>
+            <td>Versatile<br>
+                Inventive<br>
+                Competent<br>
+                <input type="number" name="r0c3" min="1" max="4" value="1"/></td>
+        </tr>
+
+        <tr>
+            <td>     </td>
+            <td>Competitive<br>
+                Impetuous<br>
+                Impactful<br>
+                <input type="number" name="r1c0" min="1" max="4" value="1"/></td>
+            <td>Practical<br>
+                Sensible<br>
+                Dependable<br>
+                <input type="number" name="r1c1" min="1" max="4" value="1"/></td>
+            <td>Unique<br>
+                Empathetic<br>
+                Communicative<br>
+                <input type="number" name="r1c2" min="1" max="4" value="1"/></td>
+            <td>Curious<br>
+                Conceptual<br>
+                Knowledgeable
+                <input type="number" name="r1c3" min="1" max="4" value="1"/></td>
+        </tr>
+
+        <tr>
+            <td>     </td>
+            <td>Daring<br>
+                Impulsive<br>
+                Fun<br>
+                <input type="number" name="r2c0" min="1" max="4" value="1"/></td>
+            <td>Loyal<br>
+                Conservative<br>
+                Organized<br>
+                <input type="number" name="r2c1" min="1" max="4" value="1"/></td>
+            <td>Devoted<br>
+                Warm<br>
+                Poetic<br>
+                <input type="number" name="r2c2" min="1" max="4" value="1"/></td>
+            <td>Theoretical<br>
+                Seeking<br>
+                Ingenious<br>
+                <input type="number" name="r2c3" min="1" max="4" value="1"/></td>
+        </tr>
+
+        <tr>
+            <td>     </td>
+            <td>Exciting<br>
+                Courageous<br>
+                Skillful<br>
+                <input type="number" name="r3c0" min="1" max="4" value="1"/></td>
+            <td>Orderly<br>
+                Conventional<br>
+                Caring<br>
+                <input type="number" name="r3c1" min="1" max="4" value="1"/></td>
+            <td>Vivacious<br>
+                Affectionate<br>
+                Sympathetic<br>
+                <input type="number" name="r3c2" min="1" max="4" value="1"/></td>
+            <td>Philosophical<br>
+                Principled<br>
+                Rational<br>
+                <input type="number" name="r3c3" min="1" max="4" value="1"/></td>
+        </tr>
+
+        <tr>
+            <td>Totals</td>
+        </tr>
+
+    </table>
 	<input type="submit" class="submit" value="What is my color?">
 </form>
 

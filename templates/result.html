@@ -5,8 +5,102 @@
 	<title>Your result is color.</title>
 </head>
 <body>
+    <h1>Rank boxes in each row from most similar (4) to least similar (1) to you.</h1>
+    <h2>Each row must be numbered 1 to 4 with no duplicates.</h2>
+    <table>
+        <tr>
+            <td>     </td>
+            <td>Active<br>
+                Opportunistic<br>
+                Spontaneous<br>
+                {{ result['rankings'][0][0] }}
+            <td>Parental<br>
+                Traditional<br>
+                Responsible<br>
+                {{ result['rankings'][0][1] }}
+	        <td>Authentic<br>
+                Harmonious<br>
+                Compassionate<br>
+                {{ result['rankings'][0][2] }}
+            <td>Versatile<br>
+                Inventive<br>
+                Competent<br>
+                {{ result['rankings'][0][3] }}
+        </tr>
 
-<p><pre>{{ result }}</pre></p>
+        <tr>
+            <td>     </td>
+            <td>Competitive<br>
+                Impetuous<br>
+                Impactful<br>
+                {{ result['rankings'][1][0] }}
+            <td>Practical<br>
+                Sensible<br>
+                Dependable<br>
+                {{ result['rankings'][1][1] }}
+            <td>Unique<br>
+                Empathetic<br>
+                Communicative<br>
+                {{ result['rankings'][1][2] }}
+            <td>Curious<br>
+                Conceptual<br>
+                Knowledgeable<br>
+                {{ result['rankings'][1][3] }}
+        </tr>
+
+        <tr>
+            <td>     </td>
+            <td>Daring<br>
+                Impulsive<br>
+                Fun<br>
+                {{ result['rankings'][2][0] }}
+            <td>Loyal<br>
+                Conservative<br>
+                Organized<br>
+                {{ result['rankings'][2][1] }}
+            <td>Devoted<br>
+                Warm<br>
+                Poetic<br>
+                {{ result['rankings'][2][2] }}
+            <td>Theoretical<br>
+                Seeking<br>
+                Ingenious<br>
+                {{ result['rankings'][2][3] }}
+        </tr>
+
+        <tr>
+            <td>     </td>
+            <td>Exciting<br>
+                Courageous<br>
+                Skillful<br>
+                {{ result['rankings'][3][0] }}
+            <td>Orderly<br>
+                Conventional<br>
+                Caring<br>
+                {{ result['rankings'][3][1] }}
+            <td>Vivacious<br>
+                Affectionate<br>
+                Sympathetic<br>
+                {{ result['rankings'][3][2] }}
+            <td>Philosophical<br>
+                Principled<br>
+                Rational<br>
+                {{ result['rankings'][3][3] }}
+        </tr>
+
+        <tr>
+            <td>Totals</td>
+            {% for total in result['totals'] %}
+            <td> {{ total }} </td>
+            {% endfor %}
+        </tr>
+
+    </table>
+
+    <h3> Your are: </h3>
+    {% for color in result['colors'] %}
+    {{ color }}
+    {% endfor %}
 
 </body>
 </html>
